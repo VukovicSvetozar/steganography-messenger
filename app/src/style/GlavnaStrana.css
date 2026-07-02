@@ -1,0 +1,26 @@
+.background {
+    -fx-background-color: #FFFF00;
+}
+
+.tab-pane *.tab-header-area *.tab-header-background {
+  -fx-background-color:transparent;
+}
+
+.tab-pane {
+  -fx-tab-min-width:100px;
+  -fx-tab-max-width:100px;
+  -fx-tab-min-height:100px;
+  -fx-tab-max-height:100px;
+  -fx-background-color: #FFFFaa;
+}
+
+.tab {
+  -fx-font-family: Arial;
+  -fx-font-size: 12;
+  -fx-background-color:#ffff99 ;
+}
+
+.tab:selected {
+    -fx-background-color:#FFFF00 ;
+}
+

@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="570.0" prefWidth="600.0" style="-fx-background-color: fffb00;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ParametriSteganografije">
+   <children>
+      <GridPane>
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="600.0" minWidth="600.0" prefWidth="600.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="70.0" minHeight="70.0" prefHeight="70.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="110.0" minHeight="110.0" prefHeight="110.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="260.0" minHeight="260.0" prefHeight="260.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="90.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Button fx:id="btnKodiranje" minHeight="40.0" minWidth="80.0" mnemonicParsing="false" onAction="#kodiranje" text="Kodiranje" GridPane.rowIndex="4">
+               <GridPane.margin>
+                  <Insets left="260.0" />
+               </GridPane.margin></Button>
+            <Label fx:id="lblGreska" alignment="CENTER" contentDisplay="CENTER" minWidth="600.0" text="Podesite parametre" textFill="#1ba3c2" GridPane.rowIndex="3">
+               <font>
+                  <Font name="System Bold Italic" size="12.0" />
+               </font></Label>
+            <TitledPane collapsible="false" maxWidth="570.0" minWidth="570.0" prefWidth="570.0" text="Podešavanja" GridPane.rowIndex="1">
+               <content>
+                  <AnchorPane maxWidth="360.0" prefWidth="360.0">
+                     <children>
+                        <VBox alignment="CENTER" spacing="10.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <HBox alignment="CENTER_LEFT" maxHeight="45.0" maxWidth="500.0" minWidth="500.0" prefHeight="45.0" prefWidth="500.0" spacing="5.0">
+                                 <children>
+                                    <HBox spacing="60.0">
+                                       <HBox.margin>
+                                          <Insets left="30.0" top="5.0" />
+                                       </HBox.margin>
+                                       <children>
+                                          <Label text="Boja piksela:">
+                                             <font>
+                                                <Font name="System Bold Italic" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <HBox prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+                                             <children>
+                                                <CheckBox fx:id="cbCrveno" mnemonicParsing="false" onAction="#odaberiBoju" text="Crveno" textFill="#ee0202">
+                                                   <font>
+                                                      <Font name="System Italic" size="12.0" />
+                                                   </font>
+                                                </CheckBox>
+                                                <CheckBox fx:id="cbZeleno" mnemonicParsing="false" onAction="#odaberiBoju" text="Zeleno" textFill="#12f22c">
+                                                   <font>
+                                                      <Font name="System Bold Italic" size="12.0" />
+                                                   </font>
+                                                </CheckBox>
+                                                <CheckBox fx:id="cbPlavo" mnemonicParsing="false" onAction="#odaberiBoju" text="Plavo" textFill="#0c81ee">
+                                                   <font>
+                                                      <Font name="System Bold Italic" size="12.0" />
+                                                   </font>
+                                                </CheckBox>
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" minHeight="30.0" minWidth="500.0" spacing="5.0">
+                                 <children>
+                                    <HBox prefWidth="500.0">
+                                       <HBox.margin>
+                                          <Insets left="30.0" top="8.0" />
+                                       </HBox.margin>
+                                       <children>
+                                          <Label text="LSB:">
+                                             <font>
+                                                <Font name="System Bold Italic" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <HBox fx:id="hbKlizac" prefHeight="100.0" prefWidth="200.0">
+                                             <HBox.margin>
+                                                <Insets left="110.0" />
+                                             </HBox.margin>
+                                          </HBox>
+                                          <Label fx:id="lblVrijednostKlizaca" text="1">
+                                             <HBox.margin>
+                                                <Insets left="12.0" />
+                                             </HBox.margin>
+                                             <font>
+                                                <Font name="System Bold Italic" size="14.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+               </content>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="15.0" />
+               </GridPane.margin>
+            </TitledPane>
+            <TitledPane collapsible="false" maxWidth="570.0" minWidth="570.0" prefHeight="220.0" prefWidth="570.0" text="Parametri" GridPane.rowIndex="2">
+               <content>
+                  <AnchorPane maxWidth="360.0" prefWidth="360.0">
+                     <children>
+                        <VBox alignment="CENTER" maxWidth="500.0" minHeight="150.0" minWidth="500.0" prefWidth="500.0" spacing="10.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <HBox alignment="CENTER_LEFT" minHeight="25.0" spacing="120.0">
+                                 <children>
+                                    <Label text="Veličina teksta:">
+                                       <font>
+                                          <Font name="System Bold Italic" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="lblVelicinaTeksta" text="Label">
+                                       <font>
+                                          <Font name="System Italic" size="12.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets left="120.0" />
+                                 </VBox.margin>
+                              </HBox>
+                              <HBox minHeight="25.0" spacing="35.0">
+                                 <children>
+                                    <Label text="Kompresovana veličina teksta:">
+                                       <font>
+                                          <Font name="System Bold Italic" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="lblKompresovanaVelicinaTeksta" text="Label">
+                                       <font>
+                                          <Font name="System Italic" size="12.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets left="120.0" />
+                                 </VBox.margin>
+                              </HBox>
+                              <HBox minHeight="25.0" spacing="38.0">
+                                 <children>
+                                    <Label text="Potreban broj piksela nosioca:">
+                                       <font>
+                                          <Font name="System Bold Italic" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="lblPotrebanBrojPikselaNosioca" text="Label">
+                                       <font>
+                                          <Font name="System Italic" size="12.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets left="120.0" />
+                                 </VBox.margin>
+                              </HBox>
+                              <HBox minHeight="25.0" spacing="46.0">
+                                 <children>
+                                    <Label text="Ukupan broj piksela nosioca:">
+                                       <font>
+                                          <Font name="System Bold Italic" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="lblUkupanBrojPikselaNosioca" text="Label">
+                                       <font>
+                                          <Font name="System Italic" size="12.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets left="120.0" />
+                                 </VBox.margin>
+                              </HBox>
+                              <HBox minHeight="25.0" spacing="39.0">
+                                 <children>
+                                    <Label text="Maksimalna veličina podatka:">
+                                       <font>
+                                          <Font name="System Bold Italic" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="lblMaksimalnaVelicinaPodatka" text="Label">
+                                       <font>
+                                          <Font name="System Italic" size="12.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets left="120.0" />
+                                 </VBox.margin>
+                              </HBox>
+                           </children>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+               </content>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="15.0" />
+               </GridPane.margin>
+            </TitledPane>
+            <Label alignment="CENTER" contentDisplay="CENTER" maxWidth="600.0" text="Parametri steganografije" textFill="#cd1515">
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>

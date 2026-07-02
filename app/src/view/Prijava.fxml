@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="350.0" prefWidth="350.0" style="-fx-background-color: fffb00;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Prijava">
+   <children>
+      <Button alignment="CENTER" blendMode="GREEN" contentDisplay="CENTER" focusTraversable="false" layoutX="130.0" layoutY="270.0" mnemonicParsing="false" onAction="#Login" prefHeight="40.0" prefWidth="90.0" text="Prijava" textAlignment="CENTER" textFill="#855e11">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Button>
+      <TextField fx:id="txtUserName" alignment="CENTER" layoutX="65.0" layoutY="105.0" prefHeight="40.0" prefWidth="225.0" promptText="korisničko ime">
+         <font>
+            <Font name="System Italic" size="18.0" />
+         </font>
+      </TextField>
+      <PasswordField fx:id="txtPassword" alignment="CENTER" layoutX="65.0" layoutY="173.0" prefHeight="40.0" prefWidth="225.0" promptText="lozinka">
+         <font>
+            <Font name="System Italic" size="18.0" />
+         </font>
+      </PasswordField>
+      <Label fx:id="lblStatus" alignment="CENTER" layoutY="43.0" prefHeight="30.0" prefWidth="350.0" text="Dobro došli" textFill="#b53b3b" AnchorPane.bottomAnchor="277.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="43.0">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<GridPane maxHeight="480.0" maxWidth="700.0" minHeight="480.0" minWidth="700.0" prefHeight="480.0" prefWidth="700.0" style="-fx-background-color: ffff55;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SlanjePoruke">
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="700.0" minWidth="700.0" prefWidth="700.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints maxHeight="240.0" minHeight="240.0" prefHeight="240.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="240.0" minHeight="240.0" prefHeight="240.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <GridPane>
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="350.0" minWidth="350.0" prefWidth="350.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="350.0" minWidth="350.0" prefWidth="350.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="40.0" minHeight="40.0" prefHeight="40.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="200.0" minHeight="200.0" prefHeight="200.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="Lista korisnika" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold Italic" size="14.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="120.0" top="30.0" />
+               </GridPane.margin>
+            </Label>
+            <HBox maxHeight="60.0" minHeight="60.0" prefHeight="60.0" GridPane.columnIndex="1">
+               <children>
+                  <Label text="Odaberite sliku:">
+                     <HBox.margin>
+                        <Insets left="20.0" top="38.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="System Bold Italic" size="14.0" />
+                     </font>
+                  </Label>
+                  <ComboBox fx:id="cbOdaberiSliku" onAction="#odaberiSliku" prefWidth="150.0">
+                     <HBox.margin>
+                        <Insets left="30.0" top="32.0" />
+                     </HBox.margin>
+                  </ComboBox>
+               </children>
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin>
+            </HBox>
+            <ImageView fx:id="ivSlika" fitHeight="150.0" fitWidth="300.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets bottom="25.0" left="25.0" right="25.0" top="25.0" />
+               </GridPane.margin>
+            </ImageView>
+            <ScrollPane hbarPolicy="NEVER" maxHeight="170.0" maxWidth="320.0" minHeight="170.0" minWidth="320.0" prefHeight="170.0" prefWidth="320.0" GridPane.rowIndex="1">
+               <content>
+                  <ListView fx:id="lvListaKorisnika" maxHeight="170.0" maxWidth="320.0" minHeight="170.0" minWidth="320.0" prefHeight="170.0" prefWidth="320.0" />
+               </content>
+               <GridPane.margin>
+                  <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+               </GridPane.margin>
+            </ScrollPane>
+         </children>
+      </GridPane>
+      <GridPane GridPane.rowIndex="1">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="450.0" minWidth="450.0" prefWidth="450.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="250.0" minWidth="250.0" prefWidth="250.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="50.0" minHeight="50.0" prefHeight="50.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" text="Unesite poruku:" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold Italic" size="14.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="180.0" top="28.0" />
+               </GridPane.margin>
+            </Label>
+            <TextArea fx:id="taUnosPoruke" prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+               </GridPane.margin>
+            </TextArea>
+            <Button fx:id="btnposaljiPoruku" maxHeight="80.0" maxWidth="80.0" minHeight="95.0" minWidth="100.0" mnemonicParsing="false" onAction="#posaljiPoruku" prefHeight="80.0" prefWidth="80.0" text="Button" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <graphic>
+                  <ImageView fitHeight="130.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../style/Podesavanja.png" />
+                     </image></ImageView>
+               </graphic>
+               <GridPane.margin>
+                  <Insets left="60.0" top="20.0" />
+               </GridPane.margin>
+               <padding>
+                  <Insets right="10.0" />
+               </padding>
+            </Button>
+         </children>
+      </GridPane>
+   </children>
+</GridPane>

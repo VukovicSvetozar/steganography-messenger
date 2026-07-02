@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.net.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+
+<AnchorPane maxHeight="600.0" maxWidth="800.0" minHeight="600.0" minWidth="800.0" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: ffff00;" stylesheets="@../style/GlavnaStrana.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.GlavnaStrana">
+   <children>
+      <HBox layoutX="6.0" layoutY="7.0" maxHeight="120.0" maxWidth="790.0" minHeight="120.0" minWidth="790.0" prefHeight="120.0" prefWidth="790.0" style="-fx-background-color: bfff00;">
+         <children>
+            <GridPane>
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="800.0" minWidth="800.0" prefWidth="800.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints maxHeight="60.0" minHeight="60.0" prefHeight="60.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="60.0" minHeight="60.0" prefHeight="60.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <HBox prefHeight="60.0" prefWidth="800.0" spacing="20.0">
+                     <children>
+                        <Label text="Ime:">
+                           <font>
+                              <Font name="System Bold Italic" size="17.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="180.0" top="10.0" />
+                           </HBox.margin>
+                        </Label>
+                        <Label fx:id="lbIme" text="Svetozar" textFill="#e42f06">
+                           <font>
+                              <Font name="Constantia Bold Italic" size="18.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets top="10.0" />
+                           </HBox.margin>
+                        </Label>
+                        <Label text="Prezime:">
+                           <font>
+                              <Font name="System Bold Italic" size="17.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="50.0" top="10.0" />
+                           </HBox.margin>
+                        </Label>
+                        <Label fx:id="lbPrezime" text="Vukovic" textFill="#e42f06">
+                           <HBox.margin>
+                              <Insets top="10.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font name="Constantia Bold Italic" size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <GridPane.margin>
+                        <Insets />
+                     </GridPane.margin>
+                  </HBox>
+                  <HBox fx:id="hbKontejnerLabela" prefHeight="60.0" prefWidth="800.0" spacing="20.0" GridPane.rowIndex="1">
+                     <children>
+                        <Label text="Broj nepročitanih poruka: ">
+                           <font>
+                              <Font name="System Italic" size="16.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="270.0" top="2.0" />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                  </HBox>
+               </children>
+            </GridPane>
+         </children>
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+      </HBox>
+      <TabPane fx:id="tabKontejner" maxHeight="480.0" maxWidth="800.0" minHeight="480.0" minWidth="800.0" prefHeight="480.0" prefWidth="800.0" side="LEFT" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0">
+        <tabs>
+          <Tab fx:id="tab1">
+            <content>
+              <AnchorPane maxHeight="600.0" maxWidth="700.0" minHeight="600.0" minWidth="700.0" prefHeight="600.0" prefWidth="700.0">
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding></AnchorPane>
+            </content>
+               <graphic>
+                  <VBox maxHeight="90.0" maxWidth="90.0" minHeight="90.0" minWidth="90.0" prefHeight="90.0" prefWidth="90.0">
+                     <children>
+                        <ImageView fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                           <VBox.margin>
+                              <Insets left="5.0" />
+                           </VBox.margin>
+                           <image>
+                              <Image url="@../style/PosaljiPoruku.png" />
+                           </image>
+                        </ImageView>
+                        <Label minWidth="-Infinity" text="Slanje poruke">
+                           <VBox.margin>
+                              <Insets left="10.0" top="5.0" />
+                           </VBox.margin>
+                        </Label>
+                     </children>
+                  </VBox>
+               </graphic>
+          </Tab>
+            <Tab fx:id="tab2">
+               <content>
+                  <AnchorPane maxHeight="600.0" maxWidth="700.0" minHeight="600.0" minWidth="700.0" prefHeight="600.0" prefWidth="700.0">
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding>
+                  </AnchorPane>
+               </content>
+               <graphic>
+                  <VBox maxHeight="90.0" maxWidth="90.0" minHeight="90.0" minWidth="90.0" prefHeight="90.0" prefWidth="90.0">
+                     <children>
+                        <ImageView fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                           <VBox.margin>
+                              <Insets left="5.0" />
+                           </VBox.margin>
+                           <image>
+                              <Image url="@../style/PrimiPoruku.png" />
+                           </image>
+                        </ImageView>
+                        <Label minWidth="-Infinity" text="Čitanje poruke">
+                           <VBox.margin>
+                              <Insets left="10.0" top="5.0" />
+                           </VBox.margin>
+                        </Label>
+                     </children>
+                  </VBox>
+               </graphic>
+            </Tab>
+            <Tab fx:id="tab3" onSelectionChanged="#izadji">
+               <content>
+                  <AnchorPane maxHeight="600.0" maxWidth="700.0" minHeight="600.0" minWidth="700.0" prefHeight="600.0" prefWidth="700.0">
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding>
+                  </AnchorPane>
+               </content>
+               <graphic>
+                  <VBox maxHeight="90.0" maxWidth="90.0" minHeight="90.0" minWidth="90.0" prefHeight="90.0" prefWidth="90.0">
+                     <children>
+                        <Button fx:id="izlazDugme" maxHeight="80.0" maxWidth="80.0" minHeight="80.0" minWidth="80.0" mnemonicParsing="false" onAction="#izadji" prefHeight="80.0" prefWidth="80.0" text="Button">
+                           <graphic>
+                              <ImageView fitHeight="80.0" fitWidth="90.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../style/Izlaz.png" />
+                                 </image></ImageView>
+                           </graphic>
+                           <VBox.margin>
+                              <Insets left="5.0" />
+                           </VBox.margin>
+                           <padding>
+                              <Insets right="5.0" />
+                           </padding>
+                        </Button>
+                        <Label minWidth="-Infinity" text="Izlaz">
+                           <VBox.margin>
+                              <Insets left="30.0" top="5.0" />
+                           </VBox.margin>
+                        </Label>
+                     </children>
+                  </VBox>
+               </graphic>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>
