@@ -42,28 +42,6 @@ Aplikacija demonstrira praktičnu primjenu infrastrukture javnog ključa (PKI), 
 
 ---
 
-## 📁 Struktura Projekta
-
-```text
-app/
-├── src/
-│   ├── pokretanje/                 # Ulazna tačka aplikacije (main metoda)
-│   ├── controller/                 # JavaFX kontroleri (prijava, slanje/čitanje poruka, parametri...)
-│   ├── model/                      # Korisnik.java – model korisnika (sertifikat, privatni ključ...)
-│   ├── view/                       # FXML definicije ekrana
-│   ├── style/                      # CSS stilovi i ikonice interfejsa
-│   └── utility/                    # Kriptografija, steganografija, logovanje, pomoćne klase
-├── lib/                            # Eksterne biblioteke (Bouncy Castle)
-├── Sertifikati/
-│   ├── Root CA/                    # Sertifikat CA tijela
-│   └── Korisnicki sertifikati/     # X.509 sertifikati korisnika (ImePrezime.cer)
-├── Korisnici/                      # Po korisniku: privatni ključ i pristigle poruke (folder = SHA-224 heš)
-├── Slike/                          # Probne slike-nosioci za skrivanje poruka (fotografije Banjaluke)
-└── Lista korisnika/                # Evidencija naloga (korisničko ime, ime, prezime, salt, heš lozinke)
-```
-
----
-
 ## 💻 Tehnologije i Alati
 
 * **Jezik:** Java – JavaFX GUI bez modularnog sistema (nema `module-info.java`)
